@@ -18,20 +18,17 @@
 
 ## DML (Data Manipulation Language)
 DML commands are used to manage data within database tables.
-
 - **INSERT:** Adds new records to a table.
     ```sql
     INSERT INTO Idols (Name, Age, Group)
     VALUES ('Yuqi', 23, '(G)I-DLE');
     ```
-
 - **UPDATE:** Modifies existing records in a table.
     ```sql
     UPDATE Idols
     SET Age = 24
     WHERE Name = 'Yuqi';
     ```
-
 - **DELETE:** Removes records from a table.
     ```sql
     DELETE FROM Idols
@@ -42,7 +39,6 @@ DML commands are used to manage data within database tables.
 
 ## DDL (Data Definition Language)
 DDL commands define and manage database structures like tables and indexes.
-
 - **CREATE:** Creates new database objects like tables, indexes, etc.
     ```sql
     CREATE TABLE Idols (
@@ -52,18 +48,15 @@ DDL commands define and manage database structures like tables and indexes.
         Group VARCHAR(50)
     );
     ```
-
 - **ALTER:** Modifies an existing database object.
     ```sql
     ALTER TABLE Idols
     ADD COLUMN Position VARCHAR(50);
     ```
-
 - **DROP:** Deletes an existing database object.
     ```sql
     DROP TABLE Idols;
     ```
-
 - **TRUNCATE:** Removes all records from a table but keeps its structure.
     ```sql
     TRUNCATE TABLE Idols;
@@ -73,12 +66,10 @@ DDL commands define and manage database structures like tables and indexes.
 
 ## DCL (Data Control Language)
 DCL commands control access to data in the database.
-
 - **GRANT:** Provides specific privileges to users.
     ```sql
     GRANT SELECT, INSERT ON Idols TO 'user1';
     ```
-
 - **REVOKE:** Removes specific privileges from users.
     ```sql
     REVOKE INSERT ON Idols FROM 'user1';
@@ -88,17 +79,14 @@ DCL commands control access to data in the database.
 
 ## TCL (Transaction Control Language)
 TCL commands manage transactions within a database.
-
 - **COMMIT:** Saves the changes made during the current transaction.
     ```sql
     COMMIT;
     ```
-
 - **ROLLBACK:** Reverts the changes made during the current transaction.
     ```sql
     ROLLBACK;
     ```
-
 - **SAVEPOINT:** Sets a savepoint within a transaction.
     ```sql
     SAVEPOINT sp1;
@@ -108,7 +96,6 @@ TCL commands manage transactions within a database.
 
 ## DQL (Data Query Language)
 DQL commands are used to query the database.
-
 - **SELECT:** Retrieves data from one or more tables.
     ```sql
     SELECT Name, Age
@@ -126,21 +113,18 @@ Joins are used to combine rows from two or more tables based on a related column
     FROM Idols
     INNER JOIN Groups ON Idols.GroupID = Groups.ID;
     ```
-
 - **LEFT JOIN:** Returns all records from the left table and the matched records from the right table.
     ```sql
     SELECT Idols.Name, Groups.GroupName
     FROM Idols
     LEFT JOIN Groups ON Idols.GroupID = Groups.ID;
     ```
-
 - **RIGHT JOIN:** Returns all records from the right table and the matched records from the left table.
     ```sql
     SELECT Idols.Name, Groups.GroupName
     FROM Idols
     RIGHT JOIN Groups ON Idols.GroupID = Groups.ID;
     ```
-
 - **FULL JOIN:** Returns all records when there is a match in either table.
     ```sql
     SELECT Idols.Name, Groups.GroupName
@@ -158,7 +142,6 @@ Joins are used to combine rows from two or more tables based on a related column
     UNION
     SELECT GroupName FROM Groups;
     ```
-
 - **UNION ALL:** Combines the result sets of two or more `SELECT` statements (includes duplicates).
     ```sql
     SELECT Name FROM Idols

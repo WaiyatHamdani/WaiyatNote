@@ -1,3 +1,6 @@
+### Data Structure
+- [Data Structure](datastructure/datastructure.md)
+
 ### Framework
  - [react](framework/react.md)
  - [Spring](framework/Spring.md)
