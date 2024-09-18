@@ -29,22 +29,85 @@
    -  It refers to the bundling of data (variables) and methods that operate on that data into a single unit:
       - Making the fields (data) private
       - Providing public getter and setter methods
-      
+
  - In what way does Java employ abstraction?
+   - Abstraction in Java is primarily achieved through:
+      - Abstract Classes (extends)
+      - Interfaces (implements)
+
  - In what way does Java employ polymorphism?
+   - Method Overriding (Run-time Polymorphism)
+   - Method Overloading (Compile-time Polymorphism)
+
  - In what way does Java employ inheritance?
+   - Reusing Code : child can reuse parent method
+   - Creating a Class Hierarchy: PARENT > CHILD CLASS
+   - Extending Functionality : you can write new stuff thorugh child or event overide method
+
  - In what way does Java employ encapsulation?
+   - Private Fields
+   - Public Getters and Setters
+   - Data Hiding
+
  - Describe the JDK, JRE, and the JVM
+   - jvm < jre < jdk:
+      - jvm (java vitual machine) : acts like a puzzle piece that fits into different operating systems
+      - jre (Java Runtime Environment) : provide the enviroment to run java 
+      - jdk (Java Development Kit) : Contains everything needed to develop and run Java applications.
+
  - What is the difference between an object and a class?
+   - Class: Blueprint or template that defines properties and behaviors.
+   - Object: Instance of a class; actual representation with data.
+
  - List the Java primitive types
+   - byte
+   - short
+   - int
+   - long
+   - float
+   - double
+   - char
+   - boolean
+
  - What are wrapper classes?
+   - in Java are objects that encapsulate (wrap) a primitive data type within an object.
+   - summary : to make primitive data as an object 
+
  - What is autoboxing and unboxing?
+   - Autoboxing: Automatic to change a primitive to its wrapper object.
+   - Unboxing: Automatic to change a wrapper object to its primitive.
+
  - What does the "final" keyword mean?
+   - Final Variable: Once assigned, its value cannot be changed.
+   - Final Method: Cannot be overridden by subclasses.
+   - Final Class: Cannot be subclassed.
+
+
  - What does the "static" keyword mean?
+   - Static Variable: A single copy of the variable is shared across all instances of the class.
+   - Static Method: 
+      - A method that belongs to the class rather than to any object instance. 
+      - It can be called without creating an instance of the class.
+   - Static Block: A block of code that runs once when the class is loaded into memory, typically used for static initialization.
+
+
  - What are variable arguments?
- - What are the scopes in which a variable can exist in - in Java?
+   - Java allow a method to accept zero or more arguments
+   - example : 
+   ```java
+   public static int sum(int... numbers)
+      System.out.println(sum(1, 2, 3)); 
+      System.out.println(sum(4, 5)); 
+   ```
+
  - What is the "new" keyword used for?
+   - Create an Object: Instantiate a class by calling its constructor.
+   - Allocate Memory: Allocate memory for the new object in the heap.
+   - Initialize the Object: Call the class's constructor to initialize the object.
+
  - What is the "super" keyword used for?
+   - Call the constructor / method of the superclass from the subclass constructor
+   
  - What is the "this" keyword used for?
  - What is a constructor?
  - What is the difference between the == operator and .equals() method?
