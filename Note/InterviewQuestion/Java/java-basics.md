@@ -1,11 +1,35 @@
 # QC Questions on Java Basics
-
  - What is Java?
+    - Object-Oriented: Java uses objects and classes to organize code, making it easier to manage and reuse.
+    - Platform-Independent: Java code runs on the JVM, making it portable across different operating systems (Windows, Mac, Linux).
+
  - Pillars of OOP
+    - Abstraction : the concept of hiding / Contract  by using abstract(extends) and Interface(Implements)
+    - Polymorphism : Many form -> overloading(dif parameter same name) and overriding (same everything)
+    - Inheritance :  Parent -> child 
+    - Encasulation :  technique to make data as "one unit" -> by making var private / protected
+
  - Define Abstraction
+   - Abstraction simplifies a complex system by showing only the essential attributes and behaviors, while hiding unnecessary detail:
+      - Abstract Classes: Classes that cannot be instantiated on their own and may contain abstract methods (methods without a body).
+      - Interfaces: Define a contract of methods that a class must implement.
+
  - Define Polymorphism
+   - Many Forms -> Involves changing the behavior of a method through overriding and overloading:
+      - Method Overriding (Run-time Polymorphism): same method name , same paramaeter usually the changes happen in the subclass
+      - Method Overloading (Compile-time Polymorphism) : same name  but different parameter 
+
  - Define Inheritance
+   -  Inheritance allows you to use the code written in one class in another class without having to rewrite it.
+   - Inheritance in Java is implemented using: 
+      - "extends"
+
+
  - Define Encapsulation
+   -  It refers to the bundling of data (variables) and methods that operate on that data into a single unit:
+      - Making the fields (data) private
+      - Providing public getter and setter methods
+      
  - In what way does Java employ abstraction?
  - In what way does Java employ polymorphism?
  - In what way does Java employ inheritance?
