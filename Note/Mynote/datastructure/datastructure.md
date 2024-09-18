@@ -6,6 +6,7 @@
 3. [Quick Sort](#quick-sort)
 4. [Bubble Sort](#bubble-sort)
 5. [Selection Sort](#selection-sort)
+6. [Heap Sort](#heap-sort)
 
 ---
 
@@ -51,3 +52,12 @@
 - Then look at the remaining numbers, find the next smallest, and put it in the next spot.
 - Continue until all numbers are in order.
 ![selectionSort](../img/selection.gif)
+---
+
+## Heap Sort
+**How it works:**
+- Build a max heap from the input data.
+- The largest element is now at the root of the heap. Replace it with the last item of the heap and reduce the heap size by 1.
+- Heapify the root of the tree to maintain the max heap property.
+- Repeat this process until the heap size is 1, and the array is sorted.
+![heapSort](../img/heap.gif)
