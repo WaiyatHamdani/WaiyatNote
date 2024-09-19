@@ -61,7 +61,7 @@ try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
 String deleteSQL = "DELETE FROM users WHERE username = ?";
 try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
      PreparedStatement pstmt = conn.prepareStatement(deleteSQL)) {
-    pstmt.setString(1, "johndoe");
+    pstmt.setString(1, "eunchae");
     pstmt.executeUpdate();
 }
 ```
