@@ -21,7 +21,7 @@ go to : mvnrepository.com
 - .start(7000): This tells Javalin to start the server on port 7000. 
 ```java
 Javalin app = Javalin.create().start(7000);
-``
+```
 
 ## Configuring Routes
 - the app parameter is the Javalin instance from step 1
