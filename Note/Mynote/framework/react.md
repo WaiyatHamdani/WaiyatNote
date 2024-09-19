@@ -1,3 +1,7 @@
+## to install react typescript
+```bash
+npx create-react-app yourappname --template typescript
+```
 
 ## Table of Contents
 - [Basic Functional Component](#basic-functional-component)
