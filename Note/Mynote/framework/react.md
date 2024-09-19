@@ -1,3 +1,9 @@
+## to install react typescript , to start , to install axios and router
+```bash
+npx create-react-app yourappname --template typescript
+npm start    npm install axios    npm install react-router-dom
+
+```
 
 ## Table of Contents
 - [Basic Functional Component](#basic-functional-component)
