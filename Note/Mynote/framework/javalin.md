@@ -3,6 +3,7 @@
 - [Step 1: Creating and Starting the Javalin Server](#creating-and-starting-the-javalin-server)
 - [Step 2: Configuring Routes](#configuring-routes)
 - [Step 3: Calling configureRoutes(app)](#calling-configureRoutes)
+- [Cors Issue](#cors-issue)
 - [Note](#note)
 
 ## Dependecies
@@ -78,6 +79,45 @@ configureRoutes(app);
             }
         }
     ```
+
+## Cors Issue
+- if you have cor issue you can add this to allow connection to react client 
+```java
+app.before(ctx -> {
+    ctx.header("Access-Control-Allow-Origin", "*");
+    ctx.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    ctx.header("Access-Control-Allow-Headers", "Content-Type");
+});
+
+app.options("/*", ctx -> {
+    ctx.header("Access-Control-Allow-Origin", "*");
+    ctx.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    ctx.header("Access-Control-Allow-Headers", "Content-Type");
+    ctx.status(204);
+});
+```
+- full code will look like somewhat like this 
+```java
+    public static void startServer() {
+        Javalin app = Javalin.create(config -> {
+            config.before(ctx -> {
+                ctx.header("Access-Control-Allow-Origin", "*");
+                ctx.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+                ctx.header("Access-Control-Allow-Headers", "Content-Type");
+            });
+        }).start(8080);  // Starts the server on port 8080
+
+        app.options("/*", ctx -> {
+            ctx.header("Access-Control-Allow-Origin", "*");
+            ctx.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+            ctx.header("Access-Control-Allow-Headers", "Content-Type");
+            ctx.status(204);
+        });
+
+        // Add your routes/controllers here
+        configureRoutes(app); // see this on the configure route table of content as reference 
+    }
+```
 
 ## Note
 this " userController::registerUser " similar to :
