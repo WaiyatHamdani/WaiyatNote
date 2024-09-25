@@ -9,7 +9,8 @@
  - [javascript](Dynamicly_prototype_Language/javascript.md)
 
 ### OOP Staticly type
-- [java](oop/java.md)
+- [java](oop/Java/java.md)
+- [kotlin](oop/Kotlin/Kotlin.md)
 
 ### Database
 - [sql/plsql](database/sql.md)
