@@ -185,6 +185,14 @@ println(mutableFruits)  // Output: [apple, banana, cherry]
 val countryCapitals = mapOf("France" to "Paris", "Germany" to "Berlin")
 println(countryCapitals["France"])  // Output: Paris
 
+// or you can use pair
+val myMap: Map<String, Int> = mapOf(
+    Pair("One", 1),
+    Pair("Two", 2),
+    Pair("Three", 3)
+)
+
+
 // Mutable map (modifiable)
 val mutableCountryCapitals = mutableMapOf("France" to "Paris", "Germany" to "Berlin")
 mutableCountryCapitals["USA"] = "Washington"
