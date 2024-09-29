@@ -36,7 +36,7 @@ git push origin "your_branch_name"
 ```
 6) Push your branch to the remote repository:
 ```bash
-git push origin "your_branch_name"
+git push --set-upstream origin "your_branch_name"
 ```
 
 ## Delete a Branch
