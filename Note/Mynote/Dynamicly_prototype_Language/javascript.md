@@ -3,12 +3,14 @@
 - [Data Types](#data-types)
 - [Operators](#operators)
 - [Conditional Statements](#conditional-statements)
+- [Switch Statement](#switch-statement)
 - [Loops](#loops)
 - [Functions](#functions)
 - [Arrays](#arrays)
 - [Objects](#objects)
 - [Classes](#classes)
-- [Promises and Async/Await](#promises-and-asyncawait)
+- [Async/Await](#asyncawait)
+- [Promises](#promises)
 
 ## Variables and Constants
 ```js
@@ -71,6 +73,26 @@ if (condition) {
 let result = (age >= 18) ? 'Adult' : 'Minor';
 ```
 
+
+
+## Switch Statement 
+Switch Statement in JS is use  to perform different actions based on different conditions
+```javascript
+switch (expression) {
+  case value1:
+    // code to be executed if expression === value1
+    break;
+  case value2:
+    // code to be executed if expression === value2
+    break;
+  default:
+    // code to be executed if expression doesn't match any case
+}
+```
+
+
+
+
 ## Loops
 ```js
 // for loop
@@ -129,6 +151,8 @@ idols.forEach(idol => console.log(idol));
 let upperCaseIdols = idols.map(idols => idols.toUpperCase());
 ```
 
+
+
 ## Objects
 ```js
 // Object
@@ -147,6 +171,9 @@ person.greet(); // Hello, I am Yuqi!
 // Add new properties
 person.group = 'G(I)-DLE';
 ```
+
+
+
 
 ## Classes
 ```js
@@ -167,7 +194,36 @@ let person1 = new Person('Eunchae', 25);
 person1.greet(); // Hello, my name is Eunchae
 ```
 
-## Promises and Async/Await
+
+
+
+## Async/Await
+- Async: allows the computer to do other things while waiting for a slow task (like loading or fetching data). 
+ Instead of just sitting and waiting, it can run other parts of the code at the same time. Its a promise 
+- Await:  special pause button. It tells the computer "Wait right here! Don't move forward until this specific thing is done"
+```js
+// Async/Await
+async function fetchData() {
+  try {
+    let response = await fetch('https://api.example.com/data');
+    let data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+```
+
+
+
+
+
+## Promises
+1) A Promise is like that—you ask JavaScript to do something (like fetch data from the internet), but it doesn’t happen immediately.
+2) A Promise will tells you:
+  - "either it complete the task 
+  - "or something goes wrong."
+
 ```js
 // Promise
 let promise = new Promise((resolve, reject) => {
@@ -183,15 +239,4 @@ let promise = new Promise((resolve, reject) => {
 promise.then(response => console.log(response))
        .catch(error => console.log(error));
 
-// Async/Await
-async function fetchData() {
-  try {
-    let response = await fetch('https://api.example.com/data');
-    let data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error('Error:', error);
-  }
-}
 ```
-
