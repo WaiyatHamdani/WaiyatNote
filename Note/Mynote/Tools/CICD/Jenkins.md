@@ -29,6 +29,7 @@
     - Monitoring the application in production to ensure it’s running correctly.
 8) Monitor
     - Collecting feedback and analyzing performance to improve the application.
+![CICD](../../img/CI-CD.png)
 example devops jenkin file:
 ```bash
 pipeline {
