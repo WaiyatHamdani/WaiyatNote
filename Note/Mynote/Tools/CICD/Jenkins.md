@@ -8,6 +8,8 @@
 - [Test Script Example](#test-script-example)
 - [Deployment Script Example](#deployment-script-example)
 - [SCM](#scm)
+- [Agent](#agent)
+- [Artifact](#artifact)
 
 ## DevOps Lifecycle
 1) Plan
@@ -209,3 +211,37 @@ stage('Checkout') {
 ```
 
 
+## Agent
+1) what is agent?
+In Jenkins pipelines, the agent directive specifies where the pipeline or a specific stage will execute. It defines the environment or node where Jenkins should run the tasks
+- any: Runs the pipeline on any available Jenkins node. If you don’t care about the specific environment.
+- none: Instructs the pipeline not to allocate any agent for the overall pipeline (useful when defining specific agents per stage).
+- docker: Runs the pipeline inside a Docker container. You can specify the image and additional options like the container’s environment.
+example: 
+```bash
+pipeline {
+    agent {
+        docker { image 'maven:3.8.1-jdk-8' }
+    }
+    stages {
+        // Define your stages here
+    }
+}
+```
+
+- dockerfile: Builds and runs the pipeline inside a Docker container built from a Dockerfile in the repository.
+example: 
+```bash
+agent {
+    dockerfile {
+        filename 'Dockerfile'
+    }
+}
+```
+2) Why is the agent Important?
+- Flexibility: Run different stages on varied environments, ensuring flexibility and customization.
+- Isolation: Docker containers ensure clean, consistent environments for builds, testing.
+- Resource Management: Assign specific agents for tasks, optimizing load distribution efficiently.
+
+
+## Artifact 
