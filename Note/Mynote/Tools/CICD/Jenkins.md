@@ -7,6 +7,7 @@
 - [Build Script Example](#build-script-example)
 - [Test Script Example](#test-script-example)
 - [Deployment Script Example](#deployment-script-example)
+- [SCM](#scm)
 
 ## DevOps Lifecycle
 1) Plan
@@ -174,3 +175,37 @@ else
     exit 1
 fi
 ```
+
+
+
+
+## SCM 
+track changes in source code management (SCM), you typically use a version control system like Git.
+Example like below:
+```bash
+stage('Checkout') {
+        steps {
+                // Checkout code from the repository
+                checkout scm
+
+                // Print out the details of the latest commit
+                script {
+                    def changeLog = currentBuild.changeSets
+                        if (changeLog) {
+                            echo "Changes detected in the repository:"
+                                for (change in changeLog) {
+                                    for (entry in change.items) {
+                                        echo "Commit ID: ${entry.commitId}"
+                                        echo "Author: ${entry.author}"
+                                        echo "Message: ${entry.msg}"
+                                    }
+                                }
+                        } else {
+                            echo "No changes detected."
+                        }
+                }
+        }
+}
+```
+
+
