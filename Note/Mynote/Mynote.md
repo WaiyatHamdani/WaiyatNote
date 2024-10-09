@@ -22,6 +22,7 @@
 - [docker](Tools/docker.md)
 - [git command cheat](Tools/GitCommandCheatCheat.md)
 - [Jenkins](Tools/CICD/Jenkins.md)
+- [Linux command](Tools/Linux.md)
 
 
 ### Interview General Question
