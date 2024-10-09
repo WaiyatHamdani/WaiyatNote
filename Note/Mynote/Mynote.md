@@ -13,6 +13,7 @@
 ### OOP Staticly type
 - [java](oop/Java/java.md)
 - [kotlin](oop/Kotlin/Kotlin.md)
+- [Python](oop/Python/Python.md)
 
 ### Database
 - [sql/plsql](database/sql.md)
