@@ -25,6 +25,8 @@
 - [Jenkins](Tools/CICD/Jenkins.md)
 - [Linux command](Tools/Linux.md)
 
+## DataScience
+- [MathPlotLib](Datascience/MathPlotLib.md)
 
 ### Interview General Question
 - [Interview QA](../InterviewQuestion/InterviewQuestion.md)
