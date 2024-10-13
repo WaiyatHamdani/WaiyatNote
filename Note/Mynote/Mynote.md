@@ -27,6 +27,8 @@
 
 ## DataScience
 - [MathPlotLib](Datascience/MathPlotLib.md)
+- [SciKit Learn](Datascience/Scikit_learn.md)
+- [Numpy](Datascience/Numpy.md)
 
 ### Interview General Question
 - [Interview QA](../InterviewQuestion/InterviewQuestion.md)
