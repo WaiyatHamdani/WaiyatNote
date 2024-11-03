@@ -1,9 +1,9 @@
 ## Table Content 
--[Introduction](#introduction)
--[Cloud Computing](#cloud-computing)
--[Benefit Cloud Computing](#benefits-of-cloud-computing)
--[Amazon Elastic Compute Cloud EC2](#amazon-elastic-compute-cloud-ec2)
--[A global Infrastructure and reliablity](#a-global-infrastructure-and-reliablity)
+- [Introduction](#introduction)
+- [Cloud Computing](#cloud-computing)
+- [Benefit Cloud Computing](#benefits-of-cloud-computing)
+- [Amazon Elastic Compute Cloud EC2](#amazon-elastic-compute-cloud-ec2)
+- [A global Infrastructure and reliablity](#a-global-infrastructure-and-reliablity)
 
 
 ## Introduction
