@@ -32,3 +32,6 @@
 
 ### Interview General Question
 - [Interview QA](../InterviewQuestion/InterviewQuestion.md)
+
+### Amazon Web Services
+- [AWS Practitioner Essential](../AWS_Note/AWS Practitioner Essential.md)
