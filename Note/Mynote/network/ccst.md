@@ -1,5 +1,7 @@
 ## Table of Contents
 - [fundamental Networking concept](#fundamental-networking-concept)
+- [Network Models and Protocol](#network-models-and-protocol)
+- [cloud computing](#cloud-computing)
 
 ## Fundamental Networking Concept
 1) Physical vs. Logical Topologies
@@ -86,3 +88,75 @@ This section introduces essential metrics for evaluating and managing network pe
     - Setup:
         - PC1 (Server): Runs the command ./iperf3 -s to start listening on port 5201.
         - PC2 (Client): Runs the command ./iperf3 -c <server_IP> to send traffic to the server for 10 seconds.
+
+
+## Network Models and Protocol 
+1) Network Models
+- Purpose:
+    - Network models serve as a blueprint to standardize communication and organize protocols and devices into layers.
+    - They help IT professionals identify where a protocol, device, or process fits in the overall network.
+- OSI Model( 7 layers):
+    - Application: Interfaces for software applications to access network services (e.g., HTTP, DNS).
+    - Presentation: Data translation and encryption (e.g., SSL/TLS).
+    - Session: Manages connections and sessions between devices.
+    - Transport: Ensures reliable data transfer with protocols like TCP (connection-oriented) or UDP (connectionless).
+    - Network: Handles routing and addressing using protocols like IP and ICMP.
+    - Data Link: Manages access to the physical medium and ensures error detection (e.g., Ethernet, MAC addresses).
+    - Physical: Transmits raw data bits over physical media (e.g., cables, wireless signals).
+- TCP/IP Model:
+    - A more practical model with fewer layers, commonly used in real-world networking.
+    - Variants:
+        - Four-layer model: Application, Transport, Internet, Network Access.
+        - Five-layer model: Application, Transport, Network, Data Link, Physical.
+    - Focuses on the primary protocols and technologies used in the Internet and modern networks.
+
+2) Protocols and Layers
+- Network Layer (Layer 3 of OSI):
+    - Responsible for routing and addressing.
+    - Key protocols:
+        - IP (Internet Protocol): Routes packets across networks.
+        - ICMP (Internet Control Message Protocol): Diagnoses network issues (e.g., ping).
+- Transport Layer (Layer 4 of OSI):
+    - Manages end-to-end communication and ensures data delivery.
+    - Key protocols:
+        - TCP (Transmission Control Protocol): Reliable, connection-oriented protocol using mechanisms like:
+            - 3-Way Handshake: Ensures a stable connection before transmitting data.
+            - Window Sizing: Optimizes data flow during sessions.
+        - UDP (User Datagram Protocol): Unreliable but faster, used for time-sensitive applications like video streaming.
+- Application Layer (Layer 7 of OSI):
+    - Provides services and interfaces for user applications.
+    - Examples:
+        - HTTP: Web browsing.
+        - DNS: Resolves domain names to IP addresses.
+        - SMTP/POP3/IMAP: Email communication.
+
+  ## Cloud Computing
+  cloud computing is  on-demand access to shared computing resources such as servers, storage, applications, and services.These resources are scalable and elastic, allowing dynamic provisioning based on demand.
+
+- benefit cloud computing: 
+1) Scalability and Elasticity:
+  - Automatically scales resources up or down based on demand (e.g., increasing web servers during high traffic periods).
+  - Eliminates the need to pre-provision infrastructure for peak usage.
+2) Cost Efficiency:
+    - Replaces large upfront fixed costs (e.g., purchasing physical servers) with smaller variable costs based on actual usage.
+    - Achieves economies of scale by sharing resources with millions of users globally, reducing overall costs.
+3) Speed and Agility:
+    - Resources can be provisioned and deployed instantly, eliminating delays associated with ordering and setting up physical hardware.
+    - Allows IT teams to respond quickly to changing business needs.
+4) Reduced Guesswork in Capacity Planning:
+    - Dynamically adjusts resources to meet actual demand, reducing underutilization or resource shortages common with traditional data centers.
+5) Global Accessibility:
+    - Enables global deployment in minutes, with data centers located close to end-users, reducing latency and improving performance.
+6) Focus on Business Outcomes:
+    - Shifts the focus from maintaining physical infrastructure (e.g., data centers, HVAC systems, and networking equipment) to delivering business value through IT services.
+
+- Cloud Service Models: 
+1) IaaS (Infrastructure as a Service):
+    - Provides virtualized computing resources like servers, storage, and networking.
+    - Example: AWS EC2, Azure Virtual Machines.
+2) PaaS (Platform as a Service):
+    - Offers a platform for developers to build, deploy, and manage applications without worrying about the underlying infrastructure.
+    - Example: Google App Engine, AWS Elastic Beanstalk.
+3) SaaS (Software as a Service):
+    - Delivers software applications over the internet, eliminating the need for local installation.
+    - Example: Microsoft Office 365, Google Workspace.
